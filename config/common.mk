@@ -24,28 +24,28 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
-    vendor/du/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
-    vendor/du/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
-    vendor/du/prebuilt/common/bin/50-base.sh:system/addon.d/50-base.sh \
+    vendor/jmz/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
+    vendor/jmz/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
+    vendor/jmz/prebuilt/common/bin/50-base.sh:system/addon.d/50-base.sh \
 
 # Backup Services whitelist
 PRODUCT_COPY_FILES += \
-    vendor/du/config/permissions/backup.xml:system/etc/sysconfig/backup.xml
+    vendor/jmz/config/permissions/backup.xml:system/etc/sysconfig/backup.xml
 
 # Init file
 PRODUCT_COPY_FILES += \
-    vendor/du/prebuilt/common/etc/init.local.rc:root/init.du.rc
+    vendor/jmz/prebuilt/common/etc/init.local.rc:root/init.jmz.rc
 
 # Copy LatinIME for gesture typing
 PRODUCT_COPY_FILES += \
-    vendor/du/prebuilt/common/lib/libjni_latinime.so:system/lib/libjni_latinime.so \
-    vendor/du/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so \
-    vendor/du/prebuilt/common/lib64/libjni_latinime.so:system/lib64/libjni_latinime.so \
-    vendor/du/prebuilt/common/lib64/libjni_latinimegoogle.so:system/lib64/libjni_latinimegoogle.so
+    vendor/jmz/prebuilt/common/lib/libjni_latinime.so:system/lib/libjni_latinime.so \
+    vendor/jmz/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so \
+    vendor/jmz/prebuilt/common/lib64/libjni_latinime.so:system/lib64/libjni_latinime.so \
+    vendor/jmz/prebuilt/common/lib64/libjni_latinimegoogle.so:system/lib64/libjni_latinimegoogle.so
 
 # SELinux filesystem labels
 PRODUCT_COPY_FILES += \
-    vendor/du/prebuilt/common/etc/init.d/50selinuxrelabel:system/etc/init.d/50selinuxrelabel
+    vendor/jmz/prebuilt/common/etc/init.d/50selinuxrelabel:system/etc/init.d/50selinuxrelabel
 
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
@@ -53,12 +53,12 @@ PRODUCT_COPY_FILES += \
 
 # Don't export PS1 in /system/etc/mkshrc.
 PRODUCT_COPY_FILES += \
-    vendor/du/prebuilt/common/etc/mkshrc:system/etc/mkshrc \
+    vendor/jmz/prebuilt/common/etc/mkshrc:system/etc/mkshrc \
 
 PRODUCT_COPY_FILES += \
-    vendor/du/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
-    vendor/du/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit \
-    vendor/du/prebuilt/common/bin/sysinit:system/bin/sysinit
+    vendor/jmz/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
+    vendor/jmz/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit \
+    vendor/jmz/prebuilt/common/bin/sysinit:system/bin/sysinit
 
 # Stagefright FFMPEG plugin
 ifneq ($(BOARD_USES_QCOM_HARDWARE),true)
@@ -77,42 +77,36 @@ PRODUCT_BOOT_JARS += \
     org.dirtyunicorns.utils
 
 # Packages
-include vendor/du/config/packages.mk
+include vendor/jmz/config/packages.mk
 
-PRODUCT_PACKAGE_OVERLAYS += vendor/du/overlay/common
+PRODUCT_PACKAGE_OVERLAYS += vendor/jmz/overlay/common
 
 # Boot Animation
 PRODUCT_COPY_FILES += \
-    vendor/du/prebuilt/common/media/bootanimation.zip:system/media/bootanimation.zip
+    vendor/jmz/prebuilt/common/media/bootanimation.zip:system/media/bootanimation.zip
 
 # SuperSU
 PRODUCT_COPY_FILES += \
-    vendor/du/prebuilt/common/UPDATE-SuperSU.zip:system/addon.d/UPDATE-SuperSU.zip \
-    vendor/du/prebuilt/common/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon
+    vendor/jmz/prebuilt/common/UPDATE-SuperSU.zip:system/addon.d/UPDATE-SuperSU.zip \
+    vendor/jmz/prebuilt/common/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon
 
 # Versioning System
-ANDROID_VERSION = 7.0
-DU_VERSION = v11.0
-ifndef DU_BUILD_TYPE
-    DU_BUILD_TYPE := DIRTY-DEEDS
-    PLATFORM_VERSION_CODENAME := DIRTY-DEEDS
-endif
-
-#Build DU-Updater only if DU_BUILD_TYPE isn't DIRTY-DEEDS
-ifneq ($(DU_BUILD_TYPE),DIRTY-DEEDS)
-PRODUCT_PACKAGES += \
-    DU-Updater
+ANDROID_VERSION = 7.1
+JMZ_VERSION = v1.0
+ifndef JMZ_BUILD_TYPE
+    JMZ_BUILD_TYPE := DIRTY
+    PLATFORM_VERSION_CODENAME := DIRTY
 endif
 
 # easy way to extend to add more packages
 -include vendor/extra/product.mk
 
 # Set all versions
-DU_VERSION := DU_$(DU_BUILD)_$(ANDROID_VERSION)_$(shell date -u +%Y%m%d-%H%M).$(DU_VERSION)-$(DU_BUILD_TYPE)
-DU_MOD_VERSION := DU_$(DU_BUILD)_$(ANDROID_VERSION)_$(shell date -u +%Y%m%d-%H%M).$(DU_VERSION)-$(DU_BUILD_TYPE)
+JMZ_VERSION := JMZ_$(JMZ_BUILD)_$(ANDROID_VERSION)_$(shell date -u +%Y%m%d-%H%M).$(JMZ_VERSION)-$(JMZ_BUILD_TYPE)
+JMZ_MOD_VERSION := JMZ_$(JMZ_BUILD)_$(ANDROID_VERSION)_$(shell date -u +%Y%m%d-%H%M).$(JMZ_VERSION)-$(JMZ_BUILD_TYPE)
 
 PRODUCT_PROPERTY_OVERRIDES += \
     BUILD_DISPLAY_ID=$(BUILD_ID) \
-    ro.du.version=$(DU_VERSION) \
-    ro.mod.version=$(DU_BUILD_TYPE)-v11.0
+    ro.jmz.version=$(JMZ_VERSION) \
+    ro.mod.version=$(JMZ_BUILD_TYPE)-v1.0
 
