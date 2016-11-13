@@ -72,10 +72,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     media.sf.extractor-plugin=libffmpeg_extractor.so
 endif
 
-# DU Utils Library
-PRODUCT_BOOT_JARS += \
-    org.dirtyunicorns.utils
-
 # Packages
 include vendor/jmz/config/packages.mk
 
