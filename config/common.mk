@@ -87,7 +87,7 @@ PRODUCT_COPY_FILES += \
     vendor/jmz/prebuilt/common/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon
 
 # Versioning System
-ANDROID_VERSION = 7.1
+ANDROID_VERSION = 7.0
 JMZ_VERSION = v1.0
 ifndef JMZ_BUILD_TYPE
     JMZ_BUILD_TYPE := DIRTY
@@ -98,8 +98,8 @@ endif
 -include vendor/extra/product.mk
 
 # Set all versions
-JMZ_VERSION := JMZ_$(JMZ_BUILD)_$(ANDROID_VERSION)_$(shell date -u +%Y%m%d-%H%M).$(JMZ_VERSION)-$(JMZ_BUILD_TYPE)
-JMZ_MOD_VERSION := JMZ_$(JMZ_BUILD)_$(ANDROID_VERSION)_$(shell date -u +%Y%m%d-%H%M).$(JMZ_VERSION)-$(JMZ_BUILD_TYPE)
+JMZ_VERSION := Jmz_$(JMZ_BUILD)$(ANDROID_VERSION)_$(shell date -u +%Y%m%d).$(JMZ_VERSION)-$(JMZ_BUILD_TYPE)
+JMZ_MOD_VERSION := Jmz_$(JMZ_BUILD)$(ANDROID_VERSION)_$(shell date -u +%Y%m%d).$(JMZ_VERSION)-$(JMZ_BUILD_TYPE)
 
 PRODUCT_PROPERTY_OVERRIDES += \
     BUILD_DISPLAY_ID=$(BUILD_ID) \
