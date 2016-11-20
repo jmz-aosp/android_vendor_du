@@ -2,6 +2,7 @@
 PRODUCT_PACKAGES += \
     CellBroadcastReceiver \
     Development \
+    OTAUpdates \
     SpareParts
 
 # Optional packages
