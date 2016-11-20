@@ -20,7 +20,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.setupwizard.enterprise_mode=1 \
     ro.com.android.dateformat=MM-dd-yyyy \
     ro.build.selinux=1 \
-    ro.com.android.dataroaming=false
+    ro.com.android.dataroaming=false \
+    ro.ota.romname=Jmz_AOSP \
+    ro.ota.version=1
+    ro.ota.manifest=https://raw.githubusercontent.com/jmz-aosp/platform_vendor_jmz/n/rom.xml
 
 # Backup Tool
 PRODUCT_COPY_FILES += \

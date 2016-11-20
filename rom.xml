@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROM>
+  <RomName>Jmz_AOSP</RomName>
+  <VersionName>7.0</VersionName>
+  <VersionNumber type="integer">1</VersionNumber>
+  <DirectUrl nil="true"></DirectUrl>
+  <HttpUrl>LINK</HttpUrl>
+  <Android>7.0.0_r21</Android>
+  <CheckMD5>MD5 HERE</CheckMD5>
+  <FileSize type="integer">420147739</FileSize>
+  <Developer>Jmz</Developer>
+  <WebsiteURL>http://jmzsoftware.com</WebsiteURL>
+  <DonateURL nil="true"></DonateURL>
+  <Changelog>### Changelog 1
+* First Release</Changelog>
+</ROM>
