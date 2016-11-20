@@ -14,6 +14,8 @@
 
 LOCAL_PATH:=$(call my-dir)
 
+$(info $(shell (wget -P $(LOCAL_PATH) http://download.projektsubstratum.com/substratum/substratum-latest.apk)))
+
 ifeq ($(TARGET_ARCH),x86)
 include $(CLEAR_VARS)
 LOCAL_MODULE       := Chromium
@@ -37,7 +39,7 @@ include $(BUILD_PREBUILT)
 endif
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := DUCertified
+LOCAL_MODULE := substratum-latest
 LOCAL_SRC_FILES := $(LOCAL_MODULE).apk
 LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_TAGS := optional
