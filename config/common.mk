@@ -97,6 +97,11 @@ ifndef JMZ_BUILD_TYPE
     PLATFORM_VERSION_CODENAME := DIRTY
 endif
 
+# Use signing keys for everything but dirty builds
+ifneq ($(JMZ_BUILD_TYPE),DIRTY)
+    PRODUCT_DEFAULT_DEV_CERTIFICATE := ../.keys/releasekey
+endif
+
 # easy way to extend to add more packages
 -include vendor/extra/product.mk
 
