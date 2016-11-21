@@ -101,8 +101,8 @@ endif
 -include vendor/extra/product.mk
 
 # Set all versions
-JMZ_VERSION := Jmz_$(JMZ_BUILD)$(ANDROID_VERSION)_$(shell date -u +%Y%m%d).$(JMZ_VERSION)-$(JMZ_BUILD_TYPE)
-JMZ_MOD_VERSION := Jmz_$(JMZ_BUILD)$(ANDROID_VERSION)_$(shell date -u +%Y%m%d).$(JMZ_VERSION)-$(JMZ_BUILD_TYPE)
+JMZ_VERSION := Jmz_$(JMZ_BUILD)$(ANDROID_VERSION)_$(shell date -u +%Y%m%d).$(JMZ_VERSION)_$(JMZ_DEVICE)-$(JMZ_BUILD_TYPE)
+JMZ_MOD_VERSION := Jmz_$(JMZ_BUILD)$(ANDROID_VERSION)_$(shell date -u +%Y%m%d).$(JMZ_VERSION)_$(JMZ_DEVICE)-$(JMZ_BUILD_TYPE)
 
 PRODUCT_PROPERTY_OVERRIDES += \
     BUILD_DISPLAY_ID=$(BUILD_ID) \
