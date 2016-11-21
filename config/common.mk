@@ -23,7 +23,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.android.dataroaming=false \
     ro.ota.romname=Jmz_AOSP \
     ro.ota.version=1 \
-    ro.ota.manifest=https://raw.githubusercontent.com/jmz-aosp/platform_vendor_jmz/n/rom.xml
+    ro.ota.manifest=https://rawgit.com/jmz-aosp/platform_vendor_jmz/n/rom.xml
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
