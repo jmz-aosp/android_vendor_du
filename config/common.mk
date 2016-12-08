@@ -22,7 +22,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1 \
     ro.com.android.dataroaming=false \
     ro.ota.romname=Jmz_AOSP \
-    ro.ota.version=1 \
+    ro.ota.version=2 \
     ro.ota.manifest=https://rawgit.com/jmz-aosp/platform_vendor_jmz/n/rom.xml
 
 # Backup Tool
