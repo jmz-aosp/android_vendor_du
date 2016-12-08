@@ -14,7 +14,7 @@
 
 LOCAL_PATH:=$(call my-dir)
 
-$(info $(shell (wget -P $(LOCAL_PATH) http://download.projektsubstratum.com/substratum/substratum-latest.apk)))
+$(info $(shell (wget http://download.projektsubstratum.com/substratum/substratum-latest.apk -O $(LOCAL_PATH)/substratum-latest.apk)))
 
 ifeq ($(TARGET_ARCH),x86)
 include $(CLEAR_VARS)

@@ -11,7 +11,7 @@ PRODUCT_PACKAGES += \
     CalendarWidget \
     Chromium \
     LatinIME \
-    OmniSwitch
+    substratum-latest
 
 # Extra tools
 PRODUCT_PACKAGES += \
