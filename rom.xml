@@ -3,11 +3,11 @@
   <RomName>Jmz_AOSP</RomName>
   <VersionName>7.1.1</VersionName>
   <VersionNumber type="integer">2</VersionNumber>
-  <DirectUrl nil="true"></DirectUrl>
-  <HttpUrl>https://www.androidfilehost.com/?fid=745425885120692340</HttpUrl>
+  <DirectUrl>https://jmz.space/shamu/Jmz_shamu_7.1.1_20161208.v2.0-Official.zip</DirectUrl>
+  <HttpUrl nil="true"></HttpUrl>
   <Android>7.1.1_r4</Android>
-  <CheckMD5>d857271c8ba239b7e315172e419bd7de</CheckMD5>
-  <FileSize type="integer">1021837167</FileSize>
+  <CheckMD5>63053804fd6540e191ee5996c17e918e</CheckMD5>
+  <FileSize type="integer">1026755010</FileSize>
   <Developer>Jmz</Developer>
   <WebsiteURL>http://jmzsoftware.com</WebsiteURL>
   <DonateURL nil="true"></DonateURL>
