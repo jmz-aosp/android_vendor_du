@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ROM>
   <RomName>Jmz_AOSP</RomName>
-  <VersionName>7.1.1</VersionName>
+  <VersionName>7.1</VersionName>
   <VersionNumber type="integer">2</VersionNumber>
   <DirectUrl>https://jmz.space/shamu/Jmz_shamu_7.1.1_20161208.v2.0-Official.zip</DirectUrl>
   <HttpUrl nil="true"></HttpUrl>
